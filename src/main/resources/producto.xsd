@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://unibague.edu.co/webapis/producto"
+           targetNamespace="http://unibague.edu.co/webapis/producto"
+           elementFormDefault="qualified">
+
+    <!-- ===================== Obtener Producto por Id ===================== -->
+    <xs:element name="obtenerProductoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="obtenerProductoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:producto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== Listar Productos ===================== -->
+    <xs:element name="listarProductosRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="listarProductosResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:producto" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== Tipo Producto ===================== -->
+    <xs:complexType name="producto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="precio" type="xs:decimal"/>
+            <xs:element name="cantidad" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
