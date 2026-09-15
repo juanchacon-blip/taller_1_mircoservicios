@@ -59,9 +59,7 @@ curl http://localhost:8080/api/productos/1
 curl -X POST http://localhost:8080/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"labubu rosa\",\"precio\":9999,\"cantidad\":1}"
 
 # Actualizar
-curl -X PUT http://localhost:8080/api/productos/1 \
-  -H "Content-Type: application/json" \
-  -d '{"nombre":"Teclado mecanico RGB","precio":175000,"cantidad":18}'
+curl -X PUT http://localhost:8080/api/productos/1 -H "Content-Type: application/json" -d "{\"nombre\":\"Teclado mecanico RGB\",\"precio\":175000,\"cantidad\":18}"
 
 # Eliminar
 curl -X DELETE http://localhost:8080/api/productos/1
