@@ -56,9 +56,7 @@ curl http://localhost:8080/api/productos
 curl http://localhost:8080/api/productos/1
 
 # Crear
-curl -X POST http://localhost:8080/api/productos \
-  -H "Content-Type: application/json" \
-  -d '{"nombre":"Webcam HD","precio":120000,"cantidad":8}'
+curl -X POST http://localhost:8080/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"labubu rosa\",\"precio\":9999,\"cantidad\":1}"
 
 # Actualizar
 curl -X PUT http://localhost:8080/api/productos/1 \
