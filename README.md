@@ -99,22 +99,4 @@ También puedes listar todos los productos vía SOAP enviando `listarProductosRe
 
 `http://localhost:8080/h2-console` → JDBC URL: `jdbc:h2:mem:productosdb`, usuario `sa`, sin contraseña.
 
-## Notas para el informe de entrega
 
-Para el informe que pide el instructivo, puedes documentar por cada criterio:
-
-1. **Servicios Web**: explica que se implementó con Spring-WS siguiendo un enfoque
-   *contract-first* (primero se define el XSD, luego se genera el código), y
-   muestra capturas del WSDL y de una petición SOAP exitosa.
-2. **Servicios API**: explica el propósito general de la API (exponer operaciones
-   de gestión de productos a otros sistemas).
-3. **Servicios API REST**: describe los endpoints, verbos HTTP, códigos de
-   estado (200, 201, 404, 204) y formato JSON. Incluye capturas de Postman.
-4. **Spring Boot**: menciona la estructura de capas (`model`, `repository`,
-   `service`, `controller`, `endpoint`) y cómo Spring Boot facilita el
-   arranque embebido (Tomcat embebido, autoconfiguración, inyección de
-   dependencias).
-
-Recuerda **citar los documentos de apoyo** del instructivo (arquitectura de
-microservicios, SOAP vs REST, APIs, etc.) en tu informe, y no copiar y pegar
-texto de internet.
